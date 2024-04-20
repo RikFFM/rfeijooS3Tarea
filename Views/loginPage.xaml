@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rfeijooS2.Views.loginPage"
+             >
+    <VerticalStackLayout
+        Spacing="20" Margin="20">
+        
+        <Image Source="logo_oficial.png"
+               HeightRequest="150"></Image>
+        <Label 
+            Text="Inicio de Sesión"
+            HorizontalTextAlignment="Center"
+            FontSize="20"
+            TextColor="CadetBlue"/>
+        <Image
+            Source="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            HeightRequest="100"
+            ></Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+                </ColumnDefinition>
+                <ColumnDefinition>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Usuario"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"></Label>
+            <Entry
+                x:Name="txtUser"
+                Placeholder="Ingrese su usuario"
+                MaxLength="8"
+                Grid.Row="0"
+                Grid.Column="1"></Entry>
+            <Label Text="Contraseña"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"></Label> 
+            <Entry x:Name="txtPasswrd"
+                   Placeholder="Ingrese su contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"></Entry>
+            <Button
+            x:Name="btnAction"
+            Text="Iniciar Sesión"
+            Clicked="btnAction_Clicked"
+                Grid.Row="2"
+                Grid.Column="0"></Button>
+
+            <Button
+                x:Name="rgtAction"
+                Text="Registrarse"
+                Clicked="rgtAction_Clicked"
+                Grid.Row="2"
+                Grid.Column="1"/>
+        </Grid>
+        
+        
+
+    </VerticalStackLayout>
+</ContentPage>
